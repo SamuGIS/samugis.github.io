@@ -6,7 +6,45 @@
 <style>
 :root{--bg:#fff9fb;--ink:#3c3540;--muted:#776b78;--accent:#c65f91;--soft:#f8e5ee;--card:#fff;--line:#f0d8e3}
 *{box-sizing:border-box}body{margin:0;font:16px/1.7 Arial,sans-serif;background:var(--bg);color:var(--ink)}
-header{padding:24px 7% 70px;background:linear-gradient(135deg,#fff1f7,#fce5ef);border-bottom:1px solid var(--line)}
+header{
+  position:relative;
+  min-height:550px;
+  padding:24px 7% 70px;
+  background:#302b35;
+  border-bottom:1px solid var(--line);
+  overflow:hidden;
+  color:white;
+}
+
+header nav, header .hero {
+  position:relative;
+  z-index:2;
+}
+
+header p {
+  color:white;
+}
+
+header .eyebrow {
+  color:#ffd3e7;
+}
+
+.hero-video {
+  position:absolute;
+  inset:0;
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  z-index:0;
+}
+
+header::after {
+  content:"";
+  position:absolute;
+  inset:0;
+  background:rgba(25,20,35,.48);
+  z-index:1;
+}
 nav{display:flex;align-items:center;gap:22px;flex-wrap:wrap}nav a,.drop summary{color:var(--ink);text-decoration:none;font-size:.95rem;cursor:pointer}
 nav a:hover,.drop summary:hover{color:var(--accent)}.drop{position:relative}.drop summary{list-style:none}.drop summary::-webkit-details-marker{display:none}
 .menu{position:absolute;z-index:5;top:30px;left:0;min-width:220px;padding:10px;background:white;border:1px solid var(--line);border-radius:12px;box-shadow:0 12px 28px #6a344014}
@@ -27,7 +65,13 @@ footer{text-align:center;padding:25px;border-top:1px solid var(--line);font-size
 <a href="case-studies.html">Case Studies</a><a href="30-day-challenge-maps.html">30-Day Challenge Maps</a><a href="flood-analysis.html">Flood Analysis</a><a href="other-maps.html">Other Maps</a>
 </div></details>
 <a href="#skills">Skills</a><a href="#certifications">Certifications</a><a href="#contact">Contact</a>
-</nav><div class="hero"><div class="eyebrow">GIS • Environment • Spatial Stories</div><h1>Mapping places.<br>Understanding change.</h1><p>A little about my work in geography, environmental management, remote sensing and GIS.</p><a class="button" href="case-studies.html">Explore my work</a></div></header>
+</nav>
+
+<video class="CongoBasin" autoplay muted loop playsinline>
+  <source src="CongoBasin.mp4" type="video/mp4">
+</video>
+
+<div class="hero"><div class="eyebrow">GIS • Environment • Spatial Stories</div><h1>Mapping places.<br>Understanding change.</h1><p>A little about my work in geography, environmental management, remote sensing and GIS.</p><a class="button" href="case-studies.html">Explore my work</a></div></header>
 <main>
 <section id="about"><h2>A little about me</h2><p>I’m a Geography and Environmental Management graduate interested in using spatial data to explore environmental challenges and communicate findings clearly.</p></section>
 <section><h2>Selected work</h2><div class="cards">
