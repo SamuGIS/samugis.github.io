@@ -7,29 +7,18 @@
 :root{--bg:#fff9fb;--ink:#3c3540;--muted:#776b78;--accent:#c65f91;--soft:#f8e5ee;--card:#fff;--line:#f0d8e3}
 *{box-sizing:border-box}body{margin:0;font:16px/1.7 Arial,sans-serif;background:var(--bg);color:var(--ink)}
 header {
-  position: relative;
-  height: 390px;
-  padding: 20px 7%;
-  overflow: hidden;
-  background: #302b35;
-  isolation: isolate;
+ position: relative;
+isolation: isolate;
+overflow: hidden;
 }
 
-.CB {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: 30% 60%;
-  z-index: -2;
-}
+<img class="CB" src="CB.png" alt="Congo Basin rainforest">
 
 .hero-overlay {
   position: absolute;
   inset: 0;
   background: rgba(25,20,35,0.15);
-  z-index: -1;
+  z-index: 1;
 }
 
 header nav {
